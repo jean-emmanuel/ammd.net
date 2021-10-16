@@ -1,0 +1,12 @@
+spip_articles:
+  -
+    options: { nom: colonne, label: Colonne, rows: '5', cols: '40', inserer_barre: edition, restrictions: { secteurs: '', branches: '', voir: { auteur: '' }, modifier: { auteur: '' } }, sql: 'text DEFAULT '''' NOT NULL', traitements: _TRAITEMENT_RACCOURCIS, versionner: on }
+    identifiant: '@6166adfb7d047'
+    verifier: {  }
+    saisie: textarea
+spip_rubriques:
+  -
+    options: { nom: colonne, label: Colonne, rows: '5', cols: '40', inserer_barre: edition, previsualisation: on, restrictions: { secteurs: '', branches: '', voir: { auteur: '' }, modifier: { auteur: '' } }, sql: 'text DEFAULT '''' NOT NULL', traitements: _TRAITEMENT_RACCOURCIS, versionner: on }
+    identifiant: '@6166ae3eb0223'
+    verifier: {  }
+    saisie: textarea
