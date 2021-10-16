@@ -44,7 +44,7 @@ Les url peertube doivent être intégrées avec le modèle <peertube|url=URL>
 
 Les boutons rouges sont intégrables avec le modèle <lien|texte=TEXT|url=URL>
 
-Les images sont intégrables avec les modèles par défaut auxquels on peut donner les paramètre hauteur et largeur si besoin.
+Les images sont intégrables avec les modèles par défaut auxquels on peut donner les paramètres `hauteur` et `largeur` si besoin.
 
 Certains articles sont des redirections, c'est géré avec le champ idoine en bas à gauche de la page d'admin d'un article (pas dans le mode édition).
 
@@ -52,4 +52,4 @@ Certains articles sont des redirections, c'est géré avec le champ idoine en ba
 
 `<blogX>` affiche les articles de la rubrique X sous forme de blog.
 
-`<articlesX> affiche`la liste des articles de la rubriques X sous forme de liens (titre + description entre parenthèses)
+`<articlesX>` affiche la liste des articles de la rubriques X sous forme de liens (titre + description entre parenthèses)
