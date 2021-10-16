@@ -1,5 +1,15 @@
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique}{tout}>
+<div class="col-left">
 
-[(#TEXTE|image_reduire{920, 0})]
+    <B_rub>
+    <h2>#TITRE</h2>
+    <BOUCLE_rub(RUBRIQUES){id_rubrique=#ID_PARENT}{si #ID_PARENT|!={0}}>
+    <p class="ariane"><a href="#URL_RUBRIQUE">Revenir à "#TITRE"</a></p>
+    </BOUCLE_rub>
 
+    [(#TEXTE|image_reduire{920, 0})]
+</div>
+[<div class="col-right">
+    (#COLONNE)
+</div>]
 </BOUCLE_rubrique>

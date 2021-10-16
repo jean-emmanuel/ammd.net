@@ -1,0 +1,12 @@
+#SET{base, #ENV{url}|parse_url|table_valeur{host}}
+#SET{data, #ARRAY}
+<BOUCLE_peertube(DATA){source json, https://#GET{base}/services/oembed?url=#ENV{url}}>
+[(#SET{data,#GET{data}|array_merge{#ARRAY{#KEY, #VALEUR}}})]
+</BOUCLE_peertube>
+
+<a class="video" href="#ENV{url}" target="_blank" style="background-image: url([(#GET{data}|table_valeur{thumbnail_url}|copie_locale|image_reduire{920, 0}|extraire_attribut{src}|supprimer_timestamp)])">
+	[<span class="caption">(#GET{data}|table_valeur{title}|textebrut)</span>]
+	<img src="[(#GET{data}|table_valeur{thumbnail_url}|image_recadre{16:9, '-'}|extraire_attribut{src})]" alt="[(#GET{data}|table_valeur{title}|texte_backend)]"/>
+</a>
+
+</BOUCLE_peertube>

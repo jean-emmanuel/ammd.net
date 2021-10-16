@@ -5,8 +5,6 @@
 [(#GET{id_article}|oui)#SET{url, #URL_ARTICLE{#GET{id_article}}}]
 [(#GET{id_rubrique}|oui)#SET{url, #URL_RUBRIQUE{#GET{id_rubrique}}}]
 [(#GET{id_doc}|oui)#SET{url, #URL_DOCUMENT{#GET{id_doc}}}]
-
-
 <p class="align-[(#ALIGN|sinon{left})]">
     <a href="#GET{url}" class="button accent">[(#TEXTE|textebrut)]</a>
 </p>

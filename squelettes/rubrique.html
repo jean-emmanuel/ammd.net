@@ -1,4 +1,6 @@
-#INCLURE{fond=inc/head, page=#ENV{page, rubrique}, env}
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}{tout}>
+#INCLURE{fond=inc/head, page=#ENV{page, rubrique}, titre=#TITRE, env}
+</BOUCLE_rubrique>
 
 #INCLURE{fond=inc/rubrique, env}
 

@@ -1,13 +1,12 @@
 <B_articles>
-
+<div class="liste-articles">
 <BOUCLE_articles(ARTICLES){id_rubrique}>
-<article>
+<a class="item" href="#URL_ARTICLE">
+    <span class="logo" [style="background-image:url((#LOGO_ARTICLE|image_reduire{120}|extraire_attribut{src}))"]></span>
+    <span class="title">#TITRE [((#DESCRIPTIF|textebrut))]</span>
 
-    <h2>#TITRE</h2>
+</a>
 
-    #TEXTE
-
-</article>
 </BOUCLE_articles>
-
+</div>
 </B_articles>

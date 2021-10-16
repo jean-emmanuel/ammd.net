@@ -1,21 +1,32 @@
 <BOUCLE_articles(ARTICLES){id_article}>
 
+<div class="col-left article">
 
+    <div class="header">
 
-<article>
+        [<div class="logo" style="background-image:url((#LOGO_ARTICLE|image_reduire{120}|extraire_attribut{src}))"></div>]
 
-    <h2>#TITRE</h2>
-    [(#REM)<p class="date">
-        [(#DATE|affdate)]
-    </p>]
-    <BOUCLE_rub(RUBRIQUES){id_rubrique=#ID_RUBRIQUE}{si #ENV{embed}|non}>
-    <p class="ariane"><a href="#URL_RUBRIQUE">Revenir à "#TITRE"</a></p>
-    </BOUCLE_rub>
+        <div class="title">
+            <h2>#TITRE</h2>
+            [(#REM)<p class="date">
+                [(#DATE|affdate)]
+            </p>]
+
+            <BOUCLE_rub(RUBRIQUES){id_rubrique=#ID_SECTEUR}>
+            <p class="ariane"><a href="#URL_RUBRIQUE">Revenir à "#TITRE"</a></p>
+            </BOUCLE_rub>
+        </div>
+
+    </div>
 
     [(#TEXTE|image_reduire{920, 0})]
 
     [<div class="notes">(#NOTES)</div>]
 
-</article>
+</div>
+
+[<div class="col-right">
+    (#COLONNE)
+</div>]
 
 </BOUCLE_articles>

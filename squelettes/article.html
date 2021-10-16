@@ -1,4 +1,6 @@
-#INCLURE{fond=inc/head, page=#ENV{page, article}, env}
+<BOUCLE_articles(ARTICLES){id_article}>
+#INCLURE{fond=inc/head, page=#ENV{page, article}, titre=#TITRE, env}
+</BOUCLE_articles>
 
 #INCLURE{fond=inc/article, env}
 

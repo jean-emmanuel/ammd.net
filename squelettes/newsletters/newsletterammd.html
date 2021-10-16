@@ -1,0 +1,76 @@
+<BOUCLE_rem(CONDITION){si #REM}>
+<!-- titre=Newsletter AMMD v2 -->
+</BOUCLE_rem>
+<BOUCLE_newsletter(NEWSLETTERS){id_newsletter}{statut?}>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+			<BOUCLE_selectionarticlesT(ARTICLES){id_newsletter}>
+			<title>[(#TITRE|textebrut)]</title>
+			</BOUCLE_selectionarticlesT>
+			<style type="text/css">
+				[(#INCLURE{#CSS{css/styles.css}|supprimer_timestamp}
+				)]
+
+				body{
+					overflow: auto!important;
+				}
+				.mail-main {
+					width: 600px;
+					margin: 20px;
+					line-height: 1.5!important;
+				}
+				h1 {
+					margin-top: 40px;
+					font-weight: bold;
+				}
+				h1 a {
+					color: var(--accent)!important;
+				}
+				h2, h3 {
+					margin-bottom: 20px;
+					font-weight: bold;
+				}
+				.video {
+					padding-bottom: 0!important;
+				}
+				.video img {
+					display:block!important;
+					width: 100%;
+					height: auto;
+				}
+				.video:before{
+					content: ""!important;
+				}
+				.video .caption {
+					line-height: 30px;
+				}
+				.mail-meta, .mail-meta a {
+					color: #aaaaaa;
+				}
+			</style>
+		</head>
+		<div class="mail-main">
+
+		<BOUCLE_selectionarticles(ARTICLES){id_newsletter}>
+
+		<h1><a href="#URL_SITE_SPIP" class="on">#NOM_SITE_SPIP</a></h1>
+		<div class="slogan">#SLOGAN_SITE_SPIP</div>
+		<div class="mail-meta">
+			<a href="[(#URL_SITE_SPIP|parametre_url{debut_blog,@#ID_ARTICLE})]">Version en ligne</a> / <a href="@url_unsubscribe@">Désinscription</a>
+		</div>
+		<hr/>
+
+		<h2>#TITRE</h2>
+
+		[(#TEXTE|liens_absolus|image_reduire{920, 0}|replace{ecrire/IMG,/IMG})]
+
+		</BOUCLE_selectionarticles>
+		</div>
+    </body>
+</html>
+</BOUCLE_newsletter>
+
+#FILTRE{inline}
