@@ -2,6 +2,7 @@
 
 ## Plugins
 
+```
 cextras (config à importer depuis champs_extra.yaml)
 facteur
 favicon
@@ -18,6 +19,7 @@ scssphp
 spip_bonux
 verifier
 yaml
+```
 
 
 ## Structure
